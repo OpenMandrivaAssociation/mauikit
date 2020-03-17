@@ -21,6 +21,8 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5ConfigWidgets)
 BuildRequires:	cmake(KF5SyntaxHighlighting)
 BuildRequires:	cmake(KF5Attica)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
