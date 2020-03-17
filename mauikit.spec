@@ -24,6 +24,7 @@ BuildRequires:	cmake(KF5Attica)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5QuickControls2)
 BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
