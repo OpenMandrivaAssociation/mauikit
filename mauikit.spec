@@ -90,7 +90,7 @@ widgets shared amoing the other Maui apps.
 
 %prep
 %autosetup -p1 -n %{name}-v%{version}
-%cmake_kde5 -G Ninja -DCMAKE_COMPONENT_FM=off
+%cmake_kde5 -G Ninja
 
 %build
 %ninja_build -C build
