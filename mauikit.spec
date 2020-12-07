@@ -1,5 +1,5 @@
-define _disable_ld_no_undefined 1
-define _disable_lto 1
+%define _disable_ld_no_undefined 1
+%define _disable_lto 1
 
 #define snapshot 20200312
 %define libname %mklibname MauiKit
