@@ -8,6 +8,7 @@ Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit/-/archive/v%{version}/mauikit-v%{version}.tar.bz2
+Patch0:		mauikit-1.2-namespaces-dont-have-attributes.patch
 License:	GPLv3
 Group:		Applications/Productivity
 BuildRequires:	cmake

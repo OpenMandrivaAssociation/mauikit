@@ -1,0 +1,15 @@
+diff -up mauikit-v1.2.0/src/utils/fmh.h.omv~ mauikit-v1.2.0/src/utils/fmh.h
+--- mauikit-v1.2.0/src/utils/fmh.h.omv~	2020-12-07 17:37:23.281484491 +0100
++++ mauikit-v1.2.0/src/utils/fmh.h	2020-12-07 17:39:28.956297883 +0100
+@@ -50,11 +50,7 @@
+ /**
+  * A set of helpers related to file management and modeling of data
+  */
+-#ifdef STATIC_MAUIKIT
+ namespace FMH
+-#else
+-namespace MAUIKIT_EXPORT FMH
+-#endif
+ {
+ /**
+  * @brief isAndroid
