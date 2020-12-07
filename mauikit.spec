@@ -1,6 +1,3 @@
-%define _disable_ld_no_undefined 1
-%define _disable_lto 1
-
 #define snapshot 20200312
 %define libname %mklibname MauiKit
 %define devname %mklibname -d MauiKit
@@ -96,8 +93,6 @@ widgets shared amoing the other Maui apps.
 %cmake_kde5 -G Ninja
 
 %build
-export CC=gcc
-export CXX=g++
 %ninja_build -C build
 
 %install
