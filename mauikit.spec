@@ -93,6 +93,8 @@ widgets shared amoing the other Maui apps.
 %cmake_kde5 -G Ninja
 
 %build
+export CC=gcc
+export CXX=g++
 %ninja_build -C build
 
 %install
