@@ -1,0 +1,18 @@
+diff -Naur a/src/csd/libappletdecoration/previewclient.cpp b/src/csd/libappletdecoration/previewclient.cpp
+--- a/src/csd/libappletdecoration/previewclient.cpp	2020-11-09 18:53:22.000000000 +0000
++++ b/src/csd/libappletdecoration/previewclient.cpp	2021-02-16 12:40:30.695000000 +0000
+@@ -426,8 +426,14 @@
+     setKeepBelow(!isKeepBelow());
+ }
+ 
++#if KDECORATION2_VERSION_MINOR >= 20
++void PreviewClient::requestShowWindowMenu(const QRect &rect)
++{
++    Q_UNUSED(rect);
++#else
+ void PreviewClient::requestShowWindowMenu()
+ {
++#endif
+     emit showWindowMenuRequested();
+ }
+ 
