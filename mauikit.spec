@@ -3,13 +3,12 @@
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	1.2.0
-Release:	%{?snapshot:0.%{snapshot}.}3
+Version:	1.2.1
+Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit/-/archive/v%{version}/mauikit-v%{version}.tar.bz2
-Patch0:		mauikit-1.2-namespaces-dont-have-attributes.patch
-Patch1:		mauikit-1.2.0-fix-compilation-with-kdecoration2.patch
+
 License:	GPLv3
 Group:		Applications/Productivity
 BuildRequires:	cmake
@@ -102,7 +101,7 @@ widgets shared amoing the other Maui apps.
 
 %files
 %{_datadir}/maui
-%{_libdir}/qt5/qml/org/kde/appletdecoration
+#{_libdir}/qt5/qml/org/kde/appletdecoration
 %{_libdir}/qt5/qml/org/kde/mauikit
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
 
