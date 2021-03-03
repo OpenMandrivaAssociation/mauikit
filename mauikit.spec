@@ -102,7 +102,7 @@ widgets shared amoing the other Maui apps.
 
 %files
 %{_datadir}/maui
-%{_libdir}/qt5/qml/org/kde/appletdecoration
+#{_libdir}/qt5/qml/org/kde/appletdecoration
 %{_libdir}/qt5/qml/org/kde/mauikit
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
 
