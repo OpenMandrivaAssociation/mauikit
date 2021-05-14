@@ -100,9 +100,7 @@ widgets shared amoing the other Maui apps.
 %ninja_install -C build
 
 %files
-%{_datadir}/maui
-#{_libdir}/qt5/qml/org/kde/appletdecoration
-%{_libdir}/qt5/qml/org/kde/mauikit
+%{_libdir}/qt5/qml/org/mauikit/*
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
 
 %files -n %{libname}
