@@ -3,7 +3,7 @@
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	1.2.2
+Version:	2.0
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
@@ -102,6 +102,7 @@ widgets shared amoing the other Maui apps.
 %files
 %{_libdir}/qt5/qml/org/mauikit/*
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
+%{_datadir}/org.mauikit.controls
 
 %files -n %{libname}
 %{_libdir}/libMauiKit.so
