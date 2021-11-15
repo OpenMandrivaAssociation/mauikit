@@ -47,6 +47,7 @@ BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5WebEngine)
+BuildRequires:  pkgconfig(xproto)
 BuildRequires:  pkgconfig(xcb-icccm)
 BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
