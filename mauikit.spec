@@ -48,6 +48,7 @@ BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5WebEngine)
 BuildRequires:  pkgconfig(xcb)
+BuildRequires:  pkgconfig(xcb-atom)
 BuildRequires:  pkgconfig(xproto)
 BuildRequires:  pkgconfig(xcb-icccm)
 BuildRequires:	qt5-qtgraphicaleffects
