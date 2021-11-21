@@ -6,7 +6,7 @@
 
 Name:		mauikit
 Version:	2.1.0
-Release:	%{?snapshot:0.%{snapshot}.}1
+Release:	%{?snapshot:0.%{snapshot}.}2
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit/-/archive/v%{version}/mauikit-v%{version}.tar.bz2
@@ -85,6 +85,7 @@ widgets shared amoing the other Maui apps.
 Summary:	Development files for MauiKit
 Group:		Development/KDE and Qt
 Requires:	%{name} = %{EVRD}
+Requires: cmake(MauiKitFileBrowsing)
 
 %description -n %{devname}
 Development files for MauiKit
