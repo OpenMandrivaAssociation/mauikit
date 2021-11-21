@@ -1,9 +1,11 @@
+%define _disable_ld_no_undefined 1
+
 #define snapshot 20200312
 %define libname %mklibname MauiKit
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	2.0.0
+Version:	2.1.0
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
@@ -47,6 +49,10 @@ BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5WebEngine)
+BuildRequires:  pkgconfig(xcb)
+BuildRequires:  pkgconfig(xcb-atom)
+BuildRequires:  pkgconfig(xproto)
+BuildRequires:  pkgconfig(xcb-icccm)
 BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
