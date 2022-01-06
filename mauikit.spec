@@ -1,15 +1,16 @@
 %define _disable_ld_no_undefined 1
 
-#define snapshot 20220106
+%define snapshot 20220107
 %define libname %mklibname MauiKit
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	2.1.0
+Version:	2.1.1
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit/-/archive/%{?snapshot:master/mauikit-master.tar.bz2#/mauikit-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-v%{version}.tar.bz2}
+Patch1:		mauikit-set-soversion.patch
 
 License:	GPLv3
 Group:		Applications/Productivity
@@ -85,7 +86,9 @@ widgets shared amoing the other Maui apps.
 Summary:	Development files for MauiKit
 Group:		Development/KDE and Qt
 Requires:	%{name} = %{EVRD}
-Requires: cmake(MauiKitFileBrowsing)
+# This can't be a hard dependency -- mauikit-filebrowsing
+# requires mauikit to build
+Suggests:	cmake(MauiKitFileBrowsing)
 
 %description -n %{devname}
 Development files for MauiKit
@@ -112,8 +115,9 @@ widgets shared amoing the other Maui apps.
 %{_datadir}/org.mauikit.controls
 
 %files -n %{libname}
-%{_libdir}/libMauiKit.so
+%{_libdir}/libMauiKit.so.*
 
 %files -n %{devname}
 %{_includedir}/MauiKit
 %{_libdir}/cmake/MauiKit
+%{_libdir}/libMauiKit.so
