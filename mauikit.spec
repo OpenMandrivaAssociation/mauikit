@@ -1,15 +1,15 @@
 %define _disable_ld_no_undefined 1
 
-#define snapshot 20200312
+#define snapshot 20220106
 %define libname %mklibname MauiKit
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
 Version:	2.1.0
-Release:	%{?snapshot:0.%{snapshot}.}2
+Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
-Source0:	https://invent.kde.org/maui/mauikit/-/archive/v%{version}/mauikit-v%{version}.tar.bz2
+Source0:	https://invent.kde.org/maui/mauikit/-/archive/%{?snapshot:master/mauikit-master.tar.bz2#/mauikit-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-v%{version}.tar.bz2}
 
 License:	GPLv3
 Group:		Applications/Productivity
@@ -97,7 +97,7 @@ It lets you quickly create a Maui application and access utilities and
 widgets shared amoing the other Maui apps.
 
 %prep
-%autosetup -p1 -n %{name}-v%{version}
+%autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
 %cmake_kde5 -G Ninja
 
 %build
