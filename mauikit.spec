@@ -1,11 +1,11 @@
 %define _disable_ld_no_undefined 1
 
-%define snapshot 20220107
+#define snapshot 20220107
 %define libname %mklibname MauiKit
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	2.1.1
+Version:	2.2.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
