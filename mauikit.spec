@@ -112,9 +112,9 @@ widgets shared amoing the other Maui apps.
 %install
 %ninja_install -C build
 
-%find_lang %{name} --with-man --all-name
+%find_lang %{name}
 
-%files -f %{name}.lang
+%files -f mauikit.lang
 %{_libdir}/qt5/qml/org/mauikit/*
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
 %{_datadir}/org.mauikit.controls
