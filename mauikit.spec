@@ -57,6 +57,9 @@ BuildRequires:  pkgconfig(xcb-icccm)
 BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
+
+BuildRequires:  %{_lib}mauiman-devel
+
 Requires:	%{libname} = %{EVRD}
 
 %description
