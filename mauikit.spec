@@ -1,11 +1,11 @@
 %define _disable_ld_no_undefined 1
 
-%define snapshot 20220107
+#define snapshot 20220107
 %define libname %mklibname MauiKit
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	2.1.1
+Version:	2.2.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
@@ -57,6 +57,9 @@ BuildRequires:  pkgconfig(xcb-icccm)
 BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
+
+BuildRequires:  %{_lib}mauiman-devel
+
 Requires:	%{libname} = %{EVRD}
 
 %description
@@ -109,10 +112,15 @@ widgets shared amoing the other Maui apps.
 %install
 %ninja_install -C build
 
-%files
+%find_lang %{name}
+
+%files -f %{name}.lang
 %{_libdir}/qt5/qml/org/mauikit/*
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
 %{_datadir}/org.mauikit.controls
+
+# Not sure, why lang is not auto detected by macro find_lang. So for now, put it manually.
+%{_datadir}/locale/*/LC_MESSAGES/mauikit.mo
 
 %files -n %{libname}
 %{_libdir}/libMauiKit.so.*
