@@ -114,10 +114,13 @@ widgets shared amoing the other Maui apps.
 
 %find_lang %{name}
 
-%files -f mauikit.lang
+%files -f %{name}.lang
 %{_libdir}/qt5/qml/org/mauikit/*
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
 %{_datadir}/org.mauikit.controls
+
+# Not sure, why lang is not auto detected by macro find_lang. So for now, put it manually.
+%{_datadir}/locale/*/LC_MESSAGES/mauikit.mo
 
 %files -n %{libname}
 %{_libdir}/libMauiKit.so.*
