@@ -5,7 +5,7 @@
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	2.2.2
+Version:	3.0.0
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
@@ -58,7 +58,7 @@ BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
 
-BuildRequires:  %{_lib}mauiman-devel
+BuildRequires:  cmake(MauiMan)
 
 Requires:	%{libname} = %{EVRD}
 
