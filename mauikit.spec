@@ -58,7 +58,7 @@ BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
 
-BuildRequires:  cmake(MauiMan)
+BuildRequires:  cmake(MauiMan3)
 
 Requires:	%{libname} = %{EVRD}
 
