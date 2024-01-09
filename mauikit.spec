@@ -10,7 +10,7 @@ Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit/-/archive/%{?snapshot:master/mauikit-master.tar.bz2#/mauikit-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-v%{version}.tar.bz2}
-#Patch1:		mauikit-set-soversion.patch
+Patch1:		mauikit-set-soversion.patch
 
 License:	GPLv3
 Group:		Applications/Productivity
@@ -111,21 +111,17 @@ widgets shared amoing the other Maui apps.
 
 %install
 %ninja_install -C build
-
 %find_lang %{name}
 
-%files -f %{name}.lang
+%files -f %{name}.lang
 %{_libdir}/qt5/qml/org/mauikit/*
 %{_libdir}/qt5/qml/QtQuick/Controls.2/maui-style
 %{_datadir}/org.mauikit.controls
 
-# Not sure, why lang is not auto detected by macro find_lang. So for now, put it manually.
-%{_datadir}/locale/*/LC_MESSAGES/mauikit.mo
-
 %files -n %{libname}
-%{_libdir}/libMauiKit.so.*
+%{_libdir}/libMauiKit3.so.*
 
 %files -n %{devname}
-%{_includedir}/MauiKit
-%{_libdir}/cmake/MauiKit
-%{_libdir}/libMauiKit.so
+%{_includedir}/MauiKit3
+%{_libdir}/cmake/MauiKit3
+%{_libdir}/libMauiKit3.so

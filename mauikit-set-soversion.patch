@@ -1,11 +1,11 @@
-diff -up mauikit-master/src/CMakeLists.txt.omv~ mauikit-master/src/CMakeLists.txt
---- mauikit-master/src/CMakeLists.txt.omv~	2022-01-06 23:50:03.294799761 +0100
-+++ mauikit-master/src/CMakeLists.txt	2022-01-06 23:52:27.295245288 +0100
-@@ -189,6 +189,7 @@ add_library(MauiKit
-     assets.qrc
-     ${mauikit_QML_QRC}
-     )
-+set_target_properties(MauiKit PROPERTIES SOVERSION 0 VERSION 0.1)
+diff -up mauikit-v3.0.2/src/CMakeLists.txt.1~ mauikit-v3.0.2/src/CMakeLists.txt
+--- mauikit-v3.0.2/src/CMakeLists.txt.1~	2024-01-09 18:46:09.857044126 +0100
++++ mauikit-v3.0.2/src/CMakeLists.txt	2024-01-09 18:46:53.625514651 +0100
+@@ -312,6 +312,7 @@ target_sources(MauiKit${MAUI_MAJOR_VERSI
+     assets.qrc)
  
- if(QUICK_COMPILER)
-     add_definitions(-DQUICK_COMPILER)
+ add_library(MauiKit${MAUI_MAJOR_VERSION}::Controls ALIAS MauiKit${MAUI_MAJOR_VERSION})
++set_target_properties(MauiKit${MAUI_MAJOR_VERSION} PROPERTIES SOVERSION 0 VERSION 0.1)
+ 
+ if (QT_MAJOR_VERSION STREQUAL "5")
+     if(QUICK_COMPILER)
