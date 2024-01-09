@@ -10,7 +10,7 @@ Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit/-/archive/%{?snapshot:master/mauikit-master.tar.bz2#/mauikit-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-v%{version}.tar.bz2}
-Patch1:		mauikit-set-soversion.patch
+#Patch1:		mauikit-set-soversion.patch
 
 License:	GPLv3
 Group:		Applications/Productivity
