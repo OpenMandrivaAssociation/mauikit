@@ -120,9 +120,9 @@ widgets shared amoing the other Maui apps.
 %{_datadir}/org.mauikit.controls
 
 %files -n %{libname}
-%{_libdir}/libMauiKit3.so.*
+%{_libdir}/libMauiKit4.so.*
 
 %files -n %{devname}
-%{_includedir}/MauiKit3
-%{_libdir}/cmake/MauiKit3
-%{_libdir}/libMauiKit3.so
+%{_includedir}/MauiKit4
+%{_libdir}/cmake/MauiKit4
+%{_libdir}/libMauiKit4.so
