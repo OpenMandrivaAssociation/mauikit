@@ -5,7 +5,7 @@
 %define devname %mklibname -d MauiKit
 
 Name:		mauikit
-Version:	4.0.1
+Version:	4.0.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Library for developing MAUI applications
 Url:		https://mauikit.org/
