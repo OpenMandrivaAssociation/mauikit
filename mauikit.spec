@@ -105,7 +105,7 @@ widgets shared amoing the other Maui apps.
 
 %prep
 %autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
-%cmake_kde5 -G Ninja
+%cmake -G Ninja
 
 %build
 %ninja_build -C build
